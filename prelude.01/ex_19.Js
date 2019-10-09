@@ -13,8 +13,5 @@ function insert(str= "", toInsertopt='', positionopt= 0) {
             str_ps++;
         }
     }
-    console.log(str_insert)
     return str_insert.join('');
 }
-
-console.log(insert('hppy', 'A', 1))
