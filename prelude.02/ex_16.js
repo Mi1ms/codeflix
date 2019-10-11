@@ -12,12 +12,14 @@ module.exports = function pick(obj, ...keys) {
 
         case 'function':
             const callback = keys[0];
-            
+            console.log()
+            for (const [key, val] of Object.entries(obj)) {
+                callback(val) ? obj_clean[key] = val : null;
+            }
             break;
 
         default:
 
     }
     return obj_clean;
-    console.log(keys, typeof keys[0]);
 }
