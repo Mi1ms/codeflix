@@ -1,5 +1,5 @@
 // exercie 03 
 
-function length(str = '') {
+module.exports = function length(str = '') {
     return str.length;
 }

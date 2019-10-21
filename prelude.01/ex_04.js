@@ -1,6 +1,6 @@
 // exercice 04 
 
-function capitalize(str = '', restToLoweropt = false) { 
+module.exports = function capitalize(str = '', restToLoweropt = false) { 
     const str_split = str.split(' ');
     let nbr_word_to_cap = restToLoweropt ? 1 : str_split.length;
     for (let index = 0; index < nbr_word_to_cap; index++) {
