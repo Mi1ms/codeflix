@@ -1,4 +1,3 @@
 function isFunction(obj) {
-    return typeof obj;
+    return typeof obj == 'function';
 }
-console.log(isFunction(alert('hel')))
