@@ -23,12 +23,11 @@ if (argv.length !== 1) {
     const extension = path.extname(configfile) ;
     const split_path = configfile.split('/');
     const file = split_path.length > 1 ? split_path[split_path.length-1] : split_path[0]
-    console.log(file, extension)
-
+    
     if (file == '.env') {
         parseEnv(content, file);
     } else if (extension == '.ini') {
-        parseIni(content);
+        parseIni(content, file);
     } else {
         console.log('Not a good format'); 
         process.exit(-1);
