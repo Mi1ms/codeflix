@@ -1,6 +1,6 @@
 // exercice 08 
 let library = {
-    "65": "A",    
+    "32": " ",     "65": "A",    
     "66": "B",     "67": "C",     "68": "D",     "69": "E",     "70": "F",    
     "71": "G",     "72": "H",     "73": "I",     "74": "J",     "75": "K",    
     "76": "L",     "77": "M",     "78": "N",     "79": "O",     "80": "P",    
@@ -15,16 +15,13 @@ let library = {
     "121": "y",    "122": "z",
     }
 
-function swapeCase(str = '') {
+ module.exports = function swapeCase(str = '') {
     let str_swape= [];
     for (let ps in str) {
-        console.log(str[ps], "=> ", str.charCodeAt(ps))
         let letter_swape = str.charCodeAt(ps) >= 65 && str.charCodeAt(ps) <= 90 ? 
         (str.charCodeAt(ps) + 32) : str.charCodeAt(ps) >= 97 && str.charCodeAt(ps) <= 122 ?
-        (str.charCodeAt(ps) - 32) : str[ps];
+        (str.charCodeAt(ps) - 32) : str.charCodeAt(ps);
         str_swape.push( library[letter_swape]);
     }
-    console.log(str_swape.join(''))
+    return str_swape.join('');
 }
-
-console.log(swapeCase('ViolEtte ChatskY'))

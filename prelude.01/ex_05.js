@@ -1,6 +1,6 @@
 // exercice 05 
 
-function decapitalize(str = '') { 
+module.exports = function decapitalize(str = '') { 
     const str_split = str.split(' ');
     for (let index = 0; index < str_split.length; index++) {
         let firstletter = str_split[index][0].toLowerCase();

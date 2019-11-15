@@ -1,14 +1,13 @@
-// non fonctionnelle (boouhh mims bouuh!! )
-
 module.exports = function intersection(...arrays) {
     const [arr_f, ...rest] = arrays;
-    arrays.splice(0,1);
-    let present = false;
-    let count = 0;
-    let results = arr_f.filter(elem  => {
-        return rest.map(array => {
-            return array.includes()
+    rest.slice(1);
+    const results = arr_f.filter(elem  => {
+        let count = 0;
+        const x = rest.map((arr) => {
+            return arr.includes(elem) ? true : false;
         });
+        return (!x.includes(false));
+        
     })
-    console.log(results)
+    return results;
 }

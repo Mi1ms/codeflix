@@ -1,3 +1,3 @@
-function slice(str='', start, endopt= str.len) {
+module.exports = function slice(str='', start, endopt= str.len) {
     return str.slice(start, endopt);
 }
